@@ -17,7 +17,7 @@ you have a strong EMACS baseline. Now you must activate the core doom emacs gola
 
 ## open `/home/REDACTED/doom/init.el`
 ## find the `:lang` section
-## remove the comments in the line that activates the Language Server Protocol technology for DOOM EMACS.
+## activate the Language Server Protocol technology for DOOM EMACS removing the comment character that turn off the line.
 ```elisp
 lsp ; Language Server Protocol
 ```
