@@ -50,7 +50,7 @@ You will get as outputs at the end, the coordinates for the go executable and go
 ```bash
 go mod init
 ```
-## create the main folder
+## create the main file
 ```bash
 touch main.go
 ```
