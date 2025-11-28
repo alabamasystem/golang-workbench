@@ -1,29 +1,34 @@
 # pre-requisites
 -  DOOM EMACS installed, synchronized and updated
 
-# the system will ask the following
+## the system will ask the following
 
-# in the system unit where you are going to work, create the folder for the project (the `working directory`)
+## in the system unit where you are going to work, create the folder for the project (the `working directory`)
+```bash
 mkdir "$(name-of-the-working-directory)"
+```
 
-# move the terminal to the target working directory
+## move the terminal to the target working directory
+```bash
 cd "$(name-of-the-working-directory)"
+```
 
-# inside the working directory, clone the flake.nix
+## inside the working directory, clone the flake.nix
 ```bash
 git clone https://github.com/alabamasystem/golang-workbench.git
 ```
-# inside the working directory, go to the cloned folder
+
+## inside the working directory, go to the cloned folder
 ```bash
 golang-workbench
 ```
 
-# execute the flake with nix develop
+## execute the flake with nix develop
 ```bash
 nix develop
 ```
 
-# you should see an output as follows
+## you should see an output as follows
 ```bash
 [redacted@redacted:~/redacted/redacted-workbench/redacted-redacted-redacted/golang-workbench]$ nix develop
 warning: creating lock file "/redacted/redacted/redacted/redacted-redacted/redacted-redacted-redacted/golang-workbench/flake.lock": 
@@ -41,16 +46,16 @@ go version go1.24.9 linux/amd64
 
 You will get as outputs at the end, the coordinates for the go executable and gopls assistant
 
-# initiate the go project
+## initiate the go project
 ```bash
 go mod init
 ```
-# create the main folder
+## create the main folder
 ```bash
 touch main.go
 ```
 
-# open `main.go` with DOOM EMACS
+## open `main.go` with DOOM EMACS
 
 
 
