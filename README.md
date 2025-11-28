@@ -106,12 +106,7 @@ n ==> Do nothing: ask again when opening other files for current project
 
 to work in the current working directory, select `i`
 
-
-
-
-
-
-
+# If everything works correctly, everytime you create a new instance of golang-workbench using the flake.nix and you open emacs over the new main.go file you create to start working, emacs go language server protocol technology will consume the new golang toolchain instantiated inside the flake
 
 
 
