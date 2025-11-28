@@ -1,7 +1,36 @@
 # pre-requisites
--  DOOM EMACS installed, synchronized and updated
+DOOM EMACS installed, synchronized and updated
 
-## the system will ask the following
+Deploy EMACS in your systems following the official guide
+`https://github.com/doomemacs/doomemacs?tab=readme-ov-file#install`
+
+Once installed, execute doctor and address any problems
+```bash
+/home/user/.config/emacs/bin/doom doctor
+```
+
+then, perform a full emacs synchronization
+```bash
+/home/user/.config/emacs/bin/doom sync
+```
+you have a strong EMACS baseline. Now you must activate the core doom emacs golang toolchain
+
+## open `/home/REDACTED/doom/init.el`
+## find the `:lang` section
+## remove the comments in the line that activates the Language Server Protocol technology for DOOM EMACS.
+```elisp
+lsp ; Language Server Protocol
+```
+if the line does not exist, declare it.
+
+## remove the comments in the line that activates the Language Server Protocol technology for The Go Programming Language
+```elisp
+(go +lsp) ; Enable LSP support for Go
+```
+then, perform a full emacs synchronization
+```bash
+/home/REDACTED/.config/emacs/bin/doom sync
+```
 
 ## in the system unit where you are going to work, create the folder for the project (the `working directory`)
 ```bash
@@ -30,8 +59,8 @@ nix develop
 
 ## you should see an output as follows
 ```bash
-[redacted@redacted:~/redacted/redacted-workbench/redacted-redacted-redacted/golang-workbench]$ nix develop
-warning: creating lock file "/redacted/redacted/redacted/redacted-redacted/redacted-redacted-redacted/golang-workbench/flake.lock": 
+[REDACTED@REDACTED:~/REDACTED/REDACTED-workbench/REDACTED-REDACTED-REDACTED/golang-workbench]$ nix develop
+warning: creating lock file "/REDACTED/REDACTED/REDACTED/REDACTED-REDACTED/REDACTED-REDACTED-REDACTED/golang-workbench/flake.lock": 
 • Added input 'flake-utils':
     'https://api.flakehub.com/f/pinned/numtide/flake-utils/0.1.102%2Brev-11707dc2f618dd54ca8739b309ec4fc024de578b/0193276d-5b8f-7dbc-acf1-41cb7b54ad2e/source.tar.gz?narHash=sha256-l0KFg5HjrsfsO/JpG%2Br7fRrqm12kzFHyUHqHCVpMMbI%3D' (2024-11-13)
 • Added input 'flake-utils/systems':
@@ -44,7 +73,13 @@ go version go1.24.9 linux/amd64
 (nix:nix-shell-env) 
 ```
 
-You will get as outputs at the end, the coordinates for the go executable and gopls assistant
+You will get as outputs at the end, the coordinates for the go executable and gopls assistant like in this example:
+
+```bash
+/nix/store/v1kv6rv70sjbafs87p6jwrs68wyry5by-go-1.24.9/bin/go
+go version go1.24.9 linux/amd64
+/nix/store/qrzz6xjlmaarcshxa5z4k547ndp1wpba-gopls-0.19.1/bin/gopls
+```
 
 ## initiate the go project
 ```bash
