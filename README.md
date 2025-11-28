@@ -91,7 +91,20 @@ touch main.go
 ```
 
 ## open `main.go` with DOOM EMACS
+## `Alt+F2` `emacs-$(version) /home/REDACTED/working-folder-golang-workbench`
+if everything is working fine, you are going to receive a message from the Go Language Server Protocol in the LSP message window
 
+```doom-emacs-lsp
+main.go is not part of any project
+
+i ==> Import project root
+I ==> Import project by selecting root directory
+. ==> Import project at current directory
+d ==> Do not ask again for the current project by selecting ignore path interactively
+n ==> Do nothing: ask again when opening other files for current project 
+```
+
+to work in the current working directory, select `i`
 
 
 
