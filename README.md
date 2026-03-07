@@ -1,3 +1,7 @@
+# THIS STOPPED WORKING FOR SOME REASON.
+## Let me find a solution. I will go back to you.
+Sorry for the inconvenience.
+
 # pre-requisites
 DOOM EMACS installed, synchronized and updated
 
